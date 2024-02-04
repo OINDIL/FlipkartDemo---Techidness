@@ -1,0 +1,22 @@
+.cstmr-sprt-dd-container{
+    position: absolute;
+    right: 2em;
+    width: 300px;
+    box-shadow: 0 0 0.35rem;
+    border-radius: 5px;
+}
+.cstmr-sprt-dd-container ul li{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px;
+}
+.cstmr-sprt-dd-container ul li:hover{
+    background-color: rgb(249, 249, 249);
+}
+.cstmr-sprt-dd-container a{
+    color: inherit;
+    text-decoration: none;
+}

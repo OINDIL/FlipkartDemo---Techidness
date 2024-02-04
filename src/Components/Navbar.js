@@ -1,6 +1,8 @@
 import '../Css/Navbar.css'
 
 import React from 'react'
+import LoginDD from './Dropdowns/LoginDD'
+import CustomerSupportDD from './Dropdowns/CustomerSupportDD'
 
 function Navbar() {
   return (
@@ -14,7 +16,7 @@ function Navbar() {
             </div>
             <div className="login-cart-seller">
                 <ul>
-                    <li>
+                    <li title='Login'>
                         <i className='bx bx-face'></i>
                         <a href="#">Login</a>
                         <i id="login-chevron-transform" className='bx bx-chevron-down'></i>
@@ -34,6 +36,8 @@ function Navbar() {
                 </ul>
             </div>
         </nav>
+        <LoginDD/>
+        <CustomerSupportDD/>
     </div>
   )
 }

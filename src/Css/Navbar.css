@@ -1,0 +1,97 @@
+nav{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+}
+.logo{
+    /* background-color: aquamarine; */
+    width: 10%;
+}
+.search-bar{
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.search-bar input{
+    width: 100%;
+    height: 55%;
+    outline: none;
+    background-color: rgb(226, 226, 226);
+    border: none;
+    border-radius: 8px;
+    padding: 0 0 0 10px;
+}
+.login-cart-seller{
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 100%;
+    width: 30%;
+}
+.login-cart-seller ul{
+    display: flex;
+    width: 100%;
+    /* background-color: black; */
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.login-cart-seller ul li{
+    list-style-type: none;
+    /* background-color: #2a55e5; */
+
+}
+.login-cart-seller ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+.login-cart-seller ul li:hover{
+    cursor: pointer;
+}
+/* First li code */
+.login-cart-seller ul li:nth-child(1){
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    transition: all 0.2s ease;
+}
+.login-cart-seller ul li:nth-child(1) i{
+    font-size: 1.3em;
+}
+.login-cart-seller ul li:nth-child(1):hover{
+    background-color: #2a55e5;
+    color: white;
+}
+.login-cart-seller ul li:nth-child(1):hover > #login-chevron-transform{
+    animation: rotateChevron 0.3s forwards;
+}
+@keyframes rotateChevron{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+/* End of first li code */
+
+
+/* Second li or cart logo and name */
+.login-cart-seller ul li:nth-child(2){
+    /* background-color: #2a55e5; */
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.login-cart-seller ul li:nth-child(2) i{
+    font-size: 1.3em;
+}

@@ -3,6 +3,7 @@ import '../Css/Navbar.css'
 import React, { useState } from 'react'
 import LoginDD from './Dropdowns/LoginDD'
 import CustomerSupportDD from './Dropdowns/CustomerSupportDD'
+import Chevron from './Dropdowns/Chevron'
 
 function Navbar() {
     const [mouseOverLogin, setMouseOverLogin] = useState(false)
@@ -34,7 +35,8 @@ function Navbar() {
                     <li title='Login' onMouseEnter={handleMouseEnterLogin} onMouseLeave={handleMouseLeaveLogin}>
                         <i className='bx bx-face'></i>
                         <a href="#">Login</a>
-                        <i id="login-chevron-transform" className='bx bx-chevron-down'></i>
+                        <Chevron mouseOverLogin={mouseOverLogin}/>
+                        {/* <i id="login-chevron-transform" className='bx bx-chevron-down'></i> */}
                     </li>
                     <li>
                         <i className='bx bx-cart'></i>

@@ -1,10 +1,25 @@
 import '../Css/Navbar.css'
 
-import React from 'react'
+import React, { useState } from 'react'
 import LoginDD from './Dropdowns/LoginDD'
 import CustomerSupportDD from './Dropdowns/CustomerSupportDD'
 
 function Navbar() {
+    const [mouseOverLogin, setMouseOverLogin] = useState(false)
+    const [mouseOverDots, setMouseOverDots] = useState(false)
+
+    const handleMouseEnterLogin = () =>{
+        setMouseOverLogin(true)
+    }
+    const handleMouseLeaveLogin = () =>{
+        setMouseOverLogin(false)
+    }
+    const handleMouseEnterDots = () =>{
+        setMouseOverDots(true)
+    }
+    const handleMouseLeaveDots = () =>{
+        setMouseOverDots(false)
+    }
   return (
     <div>
         <nav>
@@ -16,7 +31,7 @@ function Navbar() {
             </div>
             <div className="login-cart-seller">
                 <ul>
-                    <li title='Login'>
+                    <li title='Login' onMouseEnter={handleMouseEnterLogin} onMouseLeave={handleMouseLeaveLogin}>
                         <i className='bx bx-face'></i>
                         <a href="#">Login</a>
                         <i id="login-chevron-transform" className='bx bx-chevron-down'></i>
@@ -29,15 +44,14 @@ function Navbar() {
                         {/* icon */}
                         <a href='#'>Become a Seller</a>
                     </li>
-                    <li>
-                        {/* 3 dots */}
-                        <i class='bx bx-dots-vertical-rounded'></i>
+                    <li onMouseEnter={handleMouseEnterDots} onMouseLeave={handleMouseLeaveDots}>
+                        <i className='bx bx-dots-vertical-rounded'></i>
                     </li>
                 </ul>
             </div>
         </nav>
-        <LoginDD/>
-        <CustomerSupportDD/>
+        {mouseOverLogin ? <LoginDD handleMouseEnterLogin={handleMouseEnterLogin} handleMouseLeaveLogin={handleMouseLeaveLogin}/> : console.log('mouse left')}
+        {mouseOverDots ? <CustomerSupportDD handleMouseEnterDots={handleMouseEnterDots} handleMouseLeaveDots={handleMouseLeaveDots}/> : console.log('mouse left')}
     </div>
   )
 }

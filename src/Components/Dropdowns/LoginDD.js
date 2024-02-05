@@ -1,9 +1,11 @@
 import React from 'react'
 import './Css/LoginDD.css'
-function LoginDD() {
+function LoginDD(props) {
   return (
     <div>
-        <div className="dropdown-container">
+        <div className="dropdown-container" onMouseEnter={props.handleMouseEnterLogin} 
+        onMouseLeave={props.handleMouseLeaveLogin}
+        >
             <div className="new-customer-sgnup">
                 <a href='#'>New Customer?</a>
                 <a href='#'>Sign Up</a>

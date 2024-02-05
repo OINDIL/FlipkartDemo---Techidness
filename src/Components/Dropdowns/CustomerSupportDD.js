@@ -1,17 +1,19 @@
 import './Css/CustomerSupportDD.css'
 import React from 'react'
 
-function CustomerSupportDD() {
+function CustomerSupportDD(props) {
   return (
     <div>
-        <div className="cstmr-sprt-dd-container">
+        <div className="cstmr-sprt-dd-container" onMouseEnter={props.handleMouseEnterDots}
+        onMouseLeave={props.handleMouseLeaveDots}
+        >
             <ul>
                 <li>
                     <i className='bx bx-headphone' ></i>
                     <a href="#">Notification Preferences</a>
                 </li>
                 <li>
-                    <i class='bx bx-bell' ></i>
+                    <i className='bx bx-bell' ></i>
                     <a href="#">24x7 Customer Care</a>
                 </li>
                 <li>

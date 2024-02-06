@@ -32,10 +32,10 @@ function Navbar() {
             </div>
             <div className="login-cart-seller">
                 <ul>
-                    <li title='Login' onMouseEnter={handleMouseEnterLogin} onMouseLeave={handleMouseLeaveLogin}>
+                    <li className={mouseOverLogin ? `hover-login-blue` : ``} title='Login' onMouseEnter={handleMouseEnterLogin} onMouseLeave={handleMouseLeaveLogin}>
                         <i className='bx bx-face'></i>
                         <a href="#">Login</a>
-                        <Chevron mouseOverLogin={mouseOverLogin}/>
+                        <Chevron mouseOver={mouseOverLogin}/>
                         {/* <i id="login-chevron-transform" className='bx bx-chevron-down'></i> */}
                     </li>
                     <li>
@@ -52,8 +52,8 @@ function Navbar() {
                 </ul>
             </div>
         </nav>
-        {mouseOverLogin ? <LoginDD handleMouseEnterLogin={handleMouseEnterLogin} handleMouseLeaveLogin={handleMouseLeaveLogin}/> : console.log('mouse left')}
-        {mouseOverDots ? <CustomerSupportDD handleMouseEnterDots={handleMouseEnterDots} handleMouseLeaveDots={handleMouseLeaveDots}/> : console.log('mouse left')}
+        {mouseOverLogin ? <LoginDD handleMouseEnterLogin={handleMouseEnterLogin} handleMouseLeaveLogin={handleMouseLeaveLogin}/> : console.log()}
+        {mouseOverDots ? <CustomerSupportDD handleMouseEnterDots={handleMouseEnterDots} handleMouseLeaveDots={handleMouseLeaveDots}/> : console.log()}
     </div>
   )
 }

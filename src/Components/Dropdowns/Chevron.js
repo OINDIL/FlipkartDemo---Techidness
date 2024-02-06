@@ -4,7 +4,7 @@ import React from 'react'
 function Chevron(props) {
   return (
     <>
-        <div id='chevron' className={props.mouseOverLogin ? `chevron-rotate` : ``}>
+        <div id='chevron' className={props.mouseOver ? `chevron-rotate` : ``}>
             <i className='bx bx-chevron-down'></i>
         </div>
     </>

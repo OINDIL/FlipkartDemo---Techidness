@@ -71,6 +71,10 @@ nav{
     background-color: #2a55e5;
     color: white;
 }
+.hover-login-blue{
+    background-color: #2a55e5;
+    color: white;
+}
 .login-cart-seller ul li:nth-child(1):hover > #login-chevron-transform{
     animation: rotateChevron 0.3s forwards;
 }

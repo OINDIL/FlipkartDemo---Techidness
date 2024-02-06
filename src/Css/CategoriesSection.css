@@ -27,10 +27,11 @@
 }
 .categories-sctn ul li:hover{
     cursor: pointer;
-}
-.categories-li-blue{
     color: #2a55e5;
 }
+/* .categories-li-blue{
+    color: #2a55e5;
+} */
 .categories-sctn ul li .image-name{
     display: flex;
     flex-direction: column;

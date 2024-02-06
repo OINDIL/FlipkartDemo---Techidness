@@ -16,10 +16,10 @@ function CategoriesSection() {
         { image: 'https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png', name: 'Two Wheelers', chevron: true, size: { height: 80, width: 80 } }
     ]
 
-    const handleMouseOver = (index) =>{
+    const handleMouseOver = (index) => {
         setMouseOver(index)
     }
-    const handleMouseLeave = () =>{
+    const handleMouseLeave = () => {
         setMouseOver(null)
     }
     return (
@@ -28,12 +28,12 @@ function CategoriesSection() {
                 <section className="categories-sctn">
                     <ul>
                         {categories.map((item, index) => {
-                            return (<li key={index} onMouseEnter={()=>handleMouseOver(index)} onMouseLeave={handleMouseLeave}>
+                            return (<li key={index} onMouseEnter={() => handleMouseOver(index)} onMouseLeave={handleMouseLeave}>
                                 <div className="image-name">
                                     <img src={item.image} alt="" height={item.size.height + `px`} />
                                     <div className="name-chevron">
                                         <p>{item.name}</p>
-                                        {item.chevron ? <Chevron mouseOver={mouseOver} index={index}/> : console.log()}
+                                        {item.chevron ? <Chevron mouseOver={mouseOver} index={index} /> : console.log()}
                                     </div>
                                 </div>
                             </li>)

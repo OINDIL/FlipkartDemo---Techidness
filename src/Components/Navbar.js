@@ -6,14 +6,14 @@ import CustomerSupportDD from './Dropdowns/CustomerSupportDD'
 import Chevron from './Dropdowns/Chevron'
 
 function Navbar() {
-    const [mouseOverLogin, setMouseOverLogin] = useState(false)
+    const [mouseOverLogin, setMouseOverLogin] = useState(null)
     const [mouseOverDots, setMouseOverDots] = useState(false)
 
-    const handleMouseEnterLogin = () =>{
-        setMouseOverLogin(true)
+    const handleMouseEnterLogin = (index) =>{
+        setMouseOverLogin(index)
     }
     const handleMouseLeaveLogin = () =>{
-        setMouseOverLogin(false)
+        setMouseOverLogin(null)
     }
     const handleMouseEnterDots = () =>{
         setMouseOverDots(true)
@@ -21,6 +21,7 @@ function Navbar() {
     const handleMouseLeaveDots = () =>{
         setMouseOverDots(false)
     }
+    // console.log(mouseOverLogin);
   return (
     <div>
         <nav>
@@ -32,10 +33,10 @@ function Navbar() {
             </div>
             <div className="login-cart-seller">
                 <ul>
-                    <li className={mouseOverLogin ? `hover-login-blue` : ``} title='Login' onMouseEnter={handleMouseEnterLogin} onMouseLeave={handleMouseLeaveLogin}>
+                    <li className={mouseOverLogin ? `hover-login-blue` : ``} title='Login' onMouseEnter={()=>handleMouseEnterLogin(9)} onMouseLeave={handleMouseLeaveLogin}>
                         <i className='bx bx-face'></i>
                         <a href="#">Login</a>
-                        <Chevron mouseOver={mouseOverLogin}/>
+                        <Chevron mouseOver={mouseOverLogin} index={9}/>
                         {/* <i id="login-chevron-transform" className='bx bx-chevron-down'></i> */}
                     </li>
                     <li>

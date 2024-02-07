@@ -1,0 +1,21 @@
+#categories-dd-container{
+    background-color: white;
+    position: absolute;
+    border: 1px solid #838383;
+    border-radius: 5px;
+    box-shadow: 0 0 0.15rem #838383;
+}
+#categories-dd-container ul li{
+    list-style-type: none;
+    padding: 10px 25px 10px 25px;
+}
+#categories-dd-container ul li a{
+    font-size: 0.7em;
+    font-weight: 400;
+    text-decoration: none;
+    color: #383838;
+}
+.fashion{
+    top: 12em;
+    left: 20em;
+}

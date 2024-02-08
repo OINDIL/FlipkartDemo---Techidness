@@ -1,6 +1,7 @@
 #categories-dd-container{
     background-color: white;
     position: absolute;
+    top: 12em;
     border: 1px solid #838383;
     border-radius: 5px;
     box-shadow: 0 0 0.15rem #838383;
@@ -16,6 +17,17 @@
     color: #383838;
 }
 .fashion{
-    top: 12em;
     left: 20em;
+}
+.electronics{
+    left: 30em;
+}
+.home-furniture{
+    left: 39em;
+}
+.beauty-toys{
+    left: 65em;
+}
+.two-wheelers{
+    left: 76em;
 }

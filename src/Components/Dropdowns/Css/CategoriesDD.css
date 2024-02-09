@@ -5,6 +5,7 @@
     border: 1px solid #838383;
     border-radius: 5px;
     box-shadow: 0 0 0.15rem #838383;
+    z-index: 1;
 }
 #categories-dd-container ul li{
     list-style-type: none;

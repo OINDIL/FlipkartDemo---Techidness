@@ -15,12 +15,15 @@
     background-color: white;
 }
 .categories-sctn ul{
-    width: 80%;
+    width: 85%;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 .categories-sctn ul li{
+    height: 100%;
     display: flex;
+    align-items: center;
     list-style-type:none;
     font-weight: 600;
     font-size: 0.9em;

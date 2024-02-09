@@ -112,6 +112,7 @@ function CategoriesSection() {
                 </section>
             </div>
             <CategoriesDD mouseOver={mouseOver} dropDown={dropDown}/>
+            
         </>
     )
 }
